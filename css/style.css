@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+.banner_section{
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+}
+.banner_image > figure > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner_image > figure{
+    height: 100vh;
+    margin: 0;
+}
+
+.content_wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.content_wrapper > .banner_content h1{
+    font-size: 80px;
+    font-weight: 300;
+}
+
+.content_wrapper > .banner_content h3{
+    font-size: 45px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.banner_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_button > div{
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+.banner_button a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.banner_button > .first_button{
+    border: 1px solid #ff6b6b;
+    background-color: #ff6b6b;
+}
+
+.banner_button > .second_button:hover{
+    border: 1px solid #ff6b6b;
+    background-color: #ff6b6b;
+}
+
+.get_app_now_content{
+    text-align: center;
+}
+
+.get_app_now_content h2{
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.app_collection{
+    display: flex;
+    justify-content: space-evenly;
+}
+.app_collection a{
+    font-size: 19px;
+    letter-spacing: .05em;
+    color: #9b9b9b;
+    text-decoration: none;
+}
+
+.get_app_now_search form a{
+    border: 1px solid #ff6b6b;
+    background-color: #ff6b6b;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.get_app_now_search form {
+    padding: 50px 0;
+}
+.get_app_now_wrapper{
+    align-items: center;
+}
+
+.get_app_now_search form input{
+    padding: 13px 0;
+    border: none;
+    outline: none;
+    width: 70%;
+    padding-left: 10px;
+
+}
+
+.get_app_now{
+    background-color: rgba(0,0,0,0.10);
+}
