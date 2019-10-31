@@ -101,7 +101,7 @@
 }
 
 .get_app_now_search form {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 .get_app_now_wrapper{
     align-items: center;
@@ -118,4 +118,110 @@
 
 .get_app_now{
     background-color: rgba(0,0,0,0.10);
+}
+
+.about_us_container{
+    max-width: 1200px;
+}
+
+.about_us{
+    padding: 80px 0;
+}
+
+.image_part{
+    flex: 0 0 60%;
+    max-width: 60%;
+    position: relative;
+}
+
+.video_play_button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video_player_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ffffff;
+    
+}
+
+.video_player_wrapper h3{
+    font-weight: 400;
+    margin-top: 10px;
+    font-size: 36px;
+}
+.advantages{
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.advantages h2{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.sub_advantages a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    align-items: center;
+    padding: 11px 50px 11px 15px;
+    color: #9b9b9b;
+}
+
+.fa_icon_customer i{
+    color: #ff6b6b;
+}
+
+.fa_icon_headphones i{
+    color: #50cdc5;
+}
+
+.fa_icon_tag i{
+    color: #fec107;
+}
+
+.fa_icon i{
+    font-size: 40px;
+}
+.fa_icon_text{
+    padding-left: 20px;
+}
+.fa_icon_text h3{
+    font-size: 24px;
+    color: #151515;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.fa_icon_text h6{
+    color: #9b9b9b;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.sub_advantages {
+    padding: 13px 0;
+    border-top: 1px solid #d1d1d1;
+}
+
+.advantages > a.about_us_button{
+    color: #151515;
+    background-color: transparent;
+    border: 2px solid #e8e8e8;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+
 }
