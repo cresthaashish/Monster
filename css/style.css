@@ -1,4 +1,4 @@
-*{
+.wholebody{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -248,26 +248,21 @@
 .pricing_plans_wrapper > div:nth-child(2) > .basic,.pricing_plans_wrapper div:nth-child(2) .basic a{
     background-color: #ff6b6b;
     color: #ffffff !important;
+    
 }
 
+.pricing_plans_wrapper > div:nth-child(2) > .basic{
+    position: relative;
+    top: -20px;
+    padding: 54px 0 59px;
+}
 .pricing_plans_wrapper > div:nth-child(2){
     margin: 0 -30px;
 }
 .pricing_plans_wrapper > .pricing_plans_column:nth-child(2)::before{
     position: relative;
 }
-.pricing_plans_wrapper > .pricing_plans_column:nth-child(2)::before{
-    content: '';
-    position: absolute;
-    top: -20px;
-    /* right: -20px;
-    bottom: -20px; */
-    left: 0px;
-    width: 100%;
-    background: inherit;
-    z-index: 0;
-    pointer-events: none;
-}
+
 
 .pricing_plans_wrapper div:nth-child(odd) .basic{
     border-top: 3px solid #ff6b6b;
@@ -283,17 +278,44 @@
     font-size: 14px;
     position: relative;
 }
-.basic button::before{
+.pricing_plans_wrapper div:nth-child(odd) .basic a::before,.pricing_plans_wrapper div:nth-child(odd) .basic a::after{
     content: " ";
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(-100%, 0);
     height: 1px;
-    width: 100%;
+    width: 68.5%;
     background: #e8e8e8;
    
 }
+
+.pricing_plans_wrapper div:nth-child(odd) .basic a::after{
+    transform: translate(100%, 0) !important;
+    right: 0;
+    left: auto;
+
+}
+
+.pricing_plans_wrapper > div:nth-child(2) > .basic a::before,.pricing_plans_wrapper > div:nth-child(2) > .basic a::after{
+    content: " ";
+    position: absolute;
+    top: 49%;
+    left: 0;
+    transform: translate(-100%, 0);
+    height: 1px;
+    width: 39.5%;
+    background: #c54747;
+   
+}
+
+.pricing_plans_wrapper > div:nth-child(2) > .basic a::after{
+    transform: translate(100%, 0) !important;
+    right: 0;
+    left: auto;
+
+}
+
 .basic{
     padding: 30px 25px 40px;
 }
@@ -356,7 +378,7 @@
 }
 
 .about_us_image_part figure img{
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .mobile_sms_wrapper{
@@ -397,7 +419,7 @@ h6.top_paragraph{
 }
 
 .mobile_sms_image{
-    margin: 40px 0 -35px;
+    margin: 40px 0 -16px;
 }
 
 .mobile_sms_content{
@@ -750,4 +772,34 @@ h6.top_paragraph{
 
 .footer_row{
     align-items: center;
+}
+
+.footer_element hr{
+    border-color: #485460;
+}
+
+.nav-spacing .nav-link{
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.nav-spacing .nav-item>.nav-link{
+    color: #ffffff;
+    border: 2px solid transparent;
+    padding: 13px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-spacing .nav-item>.nav-link:hover,.nav-spacing .active>.nav-link{
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.navbar_top_spacing{
+    padding-top: 30px;
 }
