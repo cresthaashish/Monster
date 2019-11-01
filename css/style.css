@@ -36,6 +36,7 @@
 .content_wrapper > .banner_content h1{
     font-size: 80px;
     font-weight: 300;
+    line-height: 1.2;
 }
 
 .content_wrapper > .banner_content h3{
@@ -52,9 +53,9 @@
 
 .banner_button > div{
     border: 1px solid #ffffff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-weight: 500;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 .banner_button a{
     text-decoration: none;
@@ -97,7 +98,7 @@
     color: #ffffff;
     padding: 15px 20px;
     text-decoration: none;
-    margin-left: 5px;
+    margin-left: -3px;
 }
 
 .get_app_now_search form {
@@ -120,7 +121,7 @@
     background-color: rgba(0,0,0,0.10);
 }
 
-.about_us_container{
+.custom_container{
     max-width: 1200px;
 }
 
@@ -128,7 +129,7 @@
     padding: 80px 0;
 }
 
-.image_part{
+.about_us_image_part{
     flex: 0 0 60%;
     max-width: 60%;
     position: relative;
@@ -224,4 +225,285 @@
     padding: 15px 30px;
     margin-top: 20px;
 
+}
+
+.pricing_plans{
+    background-color: #f2f3f8;
+    padding: 80px 0 90px;
+}
+
+.pricing_plans > .container >h2{
+    font-size: 48px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 50px;
+
+}
+
+.pricing_plans_wrapper{
+    text-align: center;
+    justify-content: center;
+}
+
+.pricing_plans_wrapper > div:nth-child(2) > .basic,.pricing_plans_wrapper div:nth-child(2) .basic a{
+    background-color: #ff6b6b;
+    color: #ffffff !important;
+}
+
+.pricing_plans_wrapper > div:nth-child(2){
+    margin: 0 -30px;
+}
+.pricing_plans_wrapper > .pricing_plans_column:nth-child(2)::before{
+    position: relative;
+}
+.pricing_plans_wrapper > .pricing_plans_column:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    /* right: -20px;
+    bottom: -20px; */
+    left: 0px;
+    width: 100%;
+    background: inherit;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.pricing_plans_wrapper div:nth-child(odd) .basic{
+    border-top: 3px solid #ff6b6b;
+    background-color: #ffffff;
+}
+
+.basic a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding: 12px 0;
+    margin: 20px 80px;
+    font-size: 14px;
+    position: relative;
+}
+.basic button::before{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, 0);
+    height: 1px;
+    width: 100%;
+    background: #e8e8e8;
+   
+}
+.basic{
+    padding: 30px 25px 40px;
+}
+
+.basic h5{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.basic h3{
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.basic h3 span{
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top: 9px;
+    left: 100px;
+}
+
+.basic small{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.pricing_plans_wrapper div:nth-child(odd) .basic a{
+    background-color: transparent;
+    border: 2px solid #e8e8e8;
+   
+}
+
+.pricing_plans_wrapper div:nth-child(2) .basic a{
+    background-color: #c54747;
+    border: 2px solid #c54747;
+   
+}
+
+.basic h6 span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #9b9b9b;
+}
+.basic h6{
+    line-height: 1.3;
+}
+.pricing_plans_wrapper div:nth-child(2) .basic h6 span{
+    color: #ffffff;
+}
+
+.about_us_image_part:hover figure img{
+    transform: scale(1.2);
+}
+
+.about_us_image_part figure{
+    overflow: hidden;
+}
+
+.about_us_image_part figure img{
+    transition: all 0.5s ease-in-out;
+}
+
+.mobile_sms_wrapper{
+    align-items: center;
+}
+
+.mobile_sms_button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 -10px;
+    margin-top: 40px;
+
+}
+
+.mobile_sms_button figure{
+    padding: 0 10px;
+}
+
+.mobile_sms_content h2{
+    font-size: 48px;
+    line-height: 1.4;
+    word-spacing: 10px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+h6.top_paragraph{
+    padding: 10px 0;
+}
+
+.mobile_sms_content h6{
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align:justify;
+}
+
+.mobile_sms_image{
+    margin: 40px 0 -35px;
+}
+
+.mobile_sms_content{
+    padding-right: 50px;
+}
+.result_driven{
+    background: transparent url('../images/bg-image-17-1920x581.jpg') no-repeat scroll center;
+}
+
+.result_driven_content{
+    color: #ffffff;
+    padding-right: 90px;
+    overflow: hidden;
+    padding: 110px 0;
+}
+
+.result_driven_content h3,.software_services div h2,.some_facts_heading h2{
+    font-size: 48px;
+    line-height: 1.4;
+    word-spacing: 10px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.result_driven_content h6{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.result_driven_content a{
+    border: 1px solid #ff6b6b;
+    background-color: #ff6b6b;
+    padding: 15px 30px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.software_services{
+    padding: 80px 0;
+}
+.software_services h2{
+    text-align: center;
+}
+
+.sub_software_services{
+    position: relative;
+    padding: 20px 50px;
+    border: 1px solid #eaeced;
+    max-width: 330px;
+    margin-top: 50px;
+    overflow-x: visible;
+    transition: .33s;
+}
+
+.sub_software_services h4{
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding-top: 20px;
+    transition: .33s;
+}
+
+.sub_software_services h6{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71429;
+    color: #9b9b9b;
+    padding-right: 7px;
+}
+
+.sub_software_services:hover h4{
+    color: #ff6b6b;
+}
+.sub_software_services .icon_section{
+    color: #ff6b6b;
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    width: 100px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.sub_software_services:hover{
+    border: 1px solid #ff6b6b;
+}
+
+.some_facts{
+    background: transparent url('../images/bg-image-2-1920x1121.jpg') no-repeat scroll center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.some_facts_heading h6{
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 7px;
+    padding-bottom: 50px;
 }
