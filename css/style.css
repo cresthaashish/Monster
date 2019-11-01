@@ -414,7 +414,7 @@ h6.top_paragraph{
     padding: 110px 0;
 }
 
-.result_driven_content h3,.software_services div h2,.some_facts_heading h2{
+.result_driven_content h3,.software_services div h2,.some_facts_heading h2,.our_clients h2,.portfolio_wrapper h2{
     font-size: 48px;
     line-height: 1.4;
     word-spacing: 10px;
@@ -470,7 +470,7 @@ h6.top_paragraph{
 .sub_software_services h6{
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.71429;
+    line-height: 1.7;
     color: #9b9b9b;
     padding-right: 7px;
 }
@@ -506,4 +506,248 @@ h6.top_paragraph{
     letter-spacing: 1px;
     word-spacing: 7px;
     padding-bottom: 50px;
+}
+
+.counter_element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter_element h3{
+    font-size: 60px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.counter_element h3 span{
+    font-size: 33px;
+    position: relative;
+    top: -8px;
+    left: 0;
+}
+
+.counter h6{
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 7px;
+    font-weight: 400;
+}
+
+.right_border{
+    border-right: 1px solid rgba(255, 255, 255, 0.4);;
+}
+
+.our_clients h2{
+    text-align: center;
+}
+
+.our_clients{
+    padding: 80px 0 150px;
+    background-color: #f2f3f8;
+}
+
+.client_review{
+    background-color: #ffffff;
+    max-width: 600px;
+    overflow-x: visible;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.client_image_content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: -30px;
+}
+
+.client_details{
+    font-weight: 400;
+    padding-left: 30px;
+}
+.client_details h4{
+    font-size: 24px;
+}
+
+.client_details h5{
+    font-size: 16px;
+    color: #9b9b9b;
+}
+
+.company_details h6{
+    font-size: 14px;
+    color: #9b9b9b;
+    font-weight: 400;
+    padding: 15px 58px 40px 128px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.our_clients_column{
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding: 0 30px;
+}
+
+.our_clients_row{
+    justify-content: space-evenly;
+    margin-right: -30px;
+    margin-left: -30px;
+}
+
+.portfolio_wrapper{
+    text-align: center;
+    padding: 80px 0 90px;
+}
+
+.portfolio_links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #9b9b9b;
+    background-color: transparent;
+    border: 2px solid #e5e7e9;
+    padding: 15px 37px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio_links a:hover,a.portfolio_active{
+    color: #ffffff;
+    border: 2px solid #ff6b6b;
+    background-color: #ff6b6b;
+}
+.portfolio_links{
+    padding: 20px 0;
+    margin: 0 -5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.images_section_container{
+    max-width: 1350px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.image_section_wrapper{
+    position: relative;
+}
+/* .image_part{
+    max-width: 444px;
+    max-height: 328px;
+    overflow: hidden;
+} */
+
+.image_part figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.images_section_column{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.image_part figure{
+    margin: 0;
+}
+
+.images_section_row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.image_section_wrapper .image_hover_part .hover_overlay{
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    /* transition: all 0.3s ease-in-out; */
+    z-index: 9;
+}
+
+.image_section_wrapper .overlay{
+    position: absolute; /* Sit on top of the page content */
+    visibility: hidden; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    /* transition: all 0.3s ease-in-out; */
+}
+
+.image_section_wrapper:hover .image_hover_part .hover_overlay,.image_section_wrapper:hover .overlay{
+    visibility: visible;
+}
+
+.footer{
+    background-color: #323c47;
+    padding: 50px 0 20px;
+}
+
+.footer_element h3{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 500;
+    word-spacing: 15px;
+}
+
+.headphone_icon ,.contact_details a, .contact_details{
+    color: #c54747;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.support{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact_details a:hover{
+    color: #151515;
+}
+
+.contact_details a{
+    font-size: 26px;
+}
+
+.contact_details{
+    padding-left: 20px;
+}
+
+.contact_details h6{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer_links a,.copyright a,.copyright{
+    color: #6a7688;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.footer_links a{
+    padding-right: 15px;
+    line-height: 2.5;
+    font-size: 16px;
+}
+.footer_links a:hover,.copyright a:hover{
+    color: #ff6b6b;
+}
+
+.footer_row{
+    align-items: center;
 }
