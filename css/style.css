@@ -56,6 +56,9 @@
     padding: 15px 30px;
     font-weight: 500;
     margin: 0 20px;
+    position: relative;
+    transition: all 1s ease-out;
+    z-index: 9;
 }
 .banner_button a{
     text-decoration: none;
@@ -67,9 +70,50 @@
     background-color: #ff6b6b;
 }
 
+.hover_effect::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+
+}
+
+.hover_effect::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+
+}
+
+.banner_button > .first_button:hover{
+    border: 1px solid #50cdc5;
+}
+
+.banner_button > .first_button:hover::before,.banner_button > .first_button:hover::after{
+    width: 50%;
+    background-color: #50cdc5;
+    z-index: -1;
+}
+
+.banner_button > .second_button:hover::before,.banner_button > .second_button:hover::after{
+    width: 50%;
+    background-color: #ff6b6b;
+    z-index: -1;
+}
+
+/* .banner_button > .first_button:hover{
+    background-color: #50cdc5;
+    border-color: #50cdc5;
+} */
 .banner_button > .second_button:hover{
     border: 1px solid #ff6b6b;
-    background-color: #ff6b6b;
 }
 
 .get_app_now_content{
@@ -164,22 +208,25 @@
     display: flex;
     flex-direction: column;
     flex: 0 0 40%;
-    max-width: 40%;
+    max-width: 100%;
 }
 
 .advantages h2{
     font-size: 48px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .sub_advantages a{
     display: flex;
     text-decoration: none;
     align-items: center;
-    align-items: center;
-    padding: 11px 50px 11px 15px;
+    justify-content: flex-start;
+    padding: 11px 0 11px 15px;
     color: #9b9b9b;
+    /* position: relative; */
+    transition: all 0.25s ease-in-out;
 }
+
 
 .fa_icon_customer i{
     color: #ff6b6b;
@@ -215,7 +262,16 @@
 .sub_advantages {
     padding: 13px 0;
     border-top: 1px solid #d1d1d1;
+    width: 80%;
 }
+
+.sub_advantages a:hover{
+    padding: 11px 0 11px 50px;
+    color: #9b9b9b;
+    background: #f2f3f8;
+    
+}
+
 
 .advantages > a.about_us_button{
     color: #151515;
@@ -224,7 +280,21 @@
     text-decoration: none;
     padding: 15px 30px;
     margin-top: 20px;
+    position: relative;
+    z-index: 9;
+    transition: all 0.3s ease-out;
 
+}
+
+.advantages > a.about_us_button:hover{
+    border: 2px solid #50cdc5;
+    color: #ffffff;
+}
+.advantages > a.about_us_button:hover::before,
+.advantages > a.about_us_button:hover::after{
+    width: 50%;
+    background-color: #50cdc5;
+    z-index: -1;
 }
 
 .pricing_plans{
@@ -236,7 +306,7 @@
     font-size: 48px;
     text-align: center;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 
 }
 
@@ -247,7 +317,7 @@
 
 .pricing_plans_wrapper > div:nth-child(2) > .basic,.pricing_plans_wrapper div:nth-child(2) .basic a{
     background-color: #ff6b6b;
-    color: #ffffff !important;
+    color: #ffffff;
     
 }
 
@@ -269,6 +339,39 @@
     background-color: #ffffff;
 }
 
+.pricing_plans_wrapper div:nth-child(odd) .basic .hover_effect:hover::before,
+.pricing_plans_wrapper div:nth-child(odd) .basic .hover_effect:hover::after{
+    width: 25%;
+    background-color: #50cdc5;
+    z-index: -1;
+}
+
+.pricing_plans_wrapper div:nth-child(odd) .basic a:hover{
+    border: 2px solid #50cdc5;
+    color: #ffffff;
+
+}
+
+.pricing_plans_wrapper div .basic .hover_effect{
+    position: relative;
+    z-index: 9;
+    transition: all 0.3s ease-out;
+}
+
+
+.pricing_plans_wrapper div:nth-child(2) .basic > .hover_effect:hover::before,
+.pricing_plans_wrapper div:nth-child(2) .basic > .hover_effect:hover::after{
+    width: 21.5%;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.pricing_plans_wrapper div:nth-child(2) .basic a:hover{
+    border: 2px solid #ffffff;
+    color: #000000;
+    background-color: transparent;
+
+}
 .basic a{
     display: block;
     text-decoration: none;
@@ -287,7 +390,7 @@
     height: 1px;
     width: 68.5%;
     background: #e8e8e8;
-   
+    z-index: -1;
 }
 
 .pricing_plans_wrapper div:nth-child(odd) .basic a::after{
@@ -304,9 +407,9 @@
     left: 0;
     transform: translate(-100%, 0);
     height: 1px;
-    width: 39.5%;
+    width: 68.5%;
     background: #c54747;
-   
+    z-index: -1;
 }
 
 .pricing_plans_wrapper > div:nth-child(2) > .basic a::after{
@@ -339,7 +442,9 @@
     top: 9px;
     left: 100px;
 }
-
+.basic h3.middle_sup span{
+    left: 125px;
+}
 .basic small{
     font-size: 15px;
     font-weight: 500;
@@ -357,6 +462,9 @@
    
 }
 
+.basic a.middle_button{
+    margin: 20px 105px;
+}
 .basic h6 span{
     font-size: 14px;
     font-weight: 400;
@@ -396,6 +504,12 @@
 
 .mobile_sms_button figure{
     padding: 0 10px;
+    transition: all 0.3s ease-in-out;
+    /* opacity: 1; */
+}
+
+.mobile_sms_button figure:hover{
+    opacity: 0.6;
 }
 
 .mobile_sms_content h2{
@@ -412,14 +526,14 @@ h6.top_paragraph{
 
 .mobile_sms_content h6{
     color: #9b9b9b;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
     text-align:justify;
 }
 
 .mobile_sms_image{
-    margin: 40px 0 -16px;
+    margin: 40px 0 -22px;
 }
 
 .mobile_sms_content{
@@ -438,7 +552,7 @@ h6.top_paragraph{
 
 .result_driven_content h3,.software_services div h2,.some_facts_heading h2,.our_clients h2,.portfolio_wrapper h2{
     font-size: 48px;
-    line-height: 1.4;
+    line-height: 1.2;
     word-spacing: 10px;
     font-weight: 400;
     letter-spacing: 5px;
@@ -446,12 +560,34 @@ h6.top_paragraph{
 }
 
 .result_driven_content h6{
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
     text-align: justify;
     margin-bottom: 50px;
 }
+/* 
+.result_driven_content a::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+
+}
+
+.result_driven_content a::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+
+} */
 
 .result_driven_content a{
     border: 1px solid #ff6b6b;
@@ -461,6 +597,22 @@ h6.top_paragraph{
     color: #ffffff;
     text-decoration: none;
     font-size: 13px;
+    position: relative;
+    z-index: 9;
+    transition: all 0.3s ease-out;
+}
+
+.result_driven_content a:hover::before,
+.result_driven_content a:hover::after{
+    width: 50%;
+    background-color: #50cdc5;
+    z-index: -1;
+}
+
+.result_driven_content a:hover{
+    border: 1px solid #50cdc5;
+    background-color: transparent;
+
 }
 
 .software_services{
@@ -609,7 +761,7 @@ h6.top_paragraph{
 
 .our_clients_column{
     flex: 0 0 45%;
-    max-width: 45%;
+    max-width: 100%;
     padding: 0 30px;
 }
 
@@ -803,3 +955,415 @@ h6.top_paragraph{
 .navbar_top_spacing{
     padding-top: 30px;
 }
+
+.navbar_on_scrolling{
+    padding-top: 0;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fav_icons a{
+    color: #ffffff;
+    padding: 0 7px;
+}
+
+/*Slick slider css*/
+
+
+.slider {
+    margin: 0 auto;
+  }
+  .slick-slide {
+    margin: 0 5px;
+  }
+  .slick-list {
+    margin: 0px -5px 0px -5px;
+  }
+  /* button.slick-next, button.slick-next:hover {
+    position: absolute;
+    top: 41%;
+    right: 54px;
+    width: 47px;
+    height: 75px;
+    background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+    background-size: 95px;
+  }
+  button.slick-prev, button.slick-prev:hover {
+    position: absolute;
+    top: 41%;
+    left: 15px;
+    z-index: 1;
+    width: 47px;
+    height: 75px;
+    background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+    background-size: 95px;
+        background-position-x: right;
+  } */
+  
+  .slick-prev:after {
+      
+      background: url(../images/previous.png) no-repeat;
+      content: "";
+      display: block;
+      background-size: 30px 30px;
+      height: 50px;
+      width: 50px;
+  
+    }
+    
+    .slick-next:after {
+      
+      background: url(../images/next.png) no-repeat;
+      content: "";
+      display: block;
+      background-size: 30px 30px;
+      height: 50px;
+      width: 50px;
+    
+    }
+  
+    
+  .slick-prev:before, .slick-next:before {
+    font-size: 70px;
+    color: #EA8496;
+    line-height: inherit;
+    font-weight: bold;
+  }
+  /* .slider img {
+    width: 324px;
+  } */
+  
+  /* Slick Slider Styles -- Provided by https://kenwheeler.github.io/slick/ */
+  /* Slider */
+  .slick-slider
+  {
+      position: relative;
+  
+      display: block;
+  
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+  
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  
+      -webkit-touch-callout: none;
+      -khtml-user-select: none;
+      -ms-touch-action: pan-y;
+          touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
+  }
+  
+  .slick-list
+  {
+      position: relative;
+  
+      display: block;
+      overflow: hidden;
+  
+      margin: 0;
+      padding: 0;
+  }
+  .slick-list:focus
+  {
+      outline: none;
+  }
+  .slick-list.dragging
+  {
+      cursor: pointer;
+      cursor: hand;
+  }
+  
+  .slick-slider .slick-track,
+  .slick-slider .slick-list
+  {
+      -webkit-transform: translate3d(0, 0, 0);
+         -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+           -o-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+  }
+  
+  .slick-track
+  {
+      position: relative;
+      top: 0;
+      left: 0;
+  
+      display: block;
+  }
+  .slick-track:before,
+  .slick-track:after
+  {
+      display: table;
+  
+      content: '';
+  }
+  .slick-track:after
+  {
+      clear: both;
+  }
+  .slick-loading .slick-track
+  {
+      visibility: hidden;
+  }
+  
+  .slick-slide
+  {
+      display: none;
+      float: left;
+  
+      height: 100%;
+      min-height: 1px;
+  }
+  [dir='rtl'] .slick-slide
+  {
+      float: right;
+  }
+  .slick-slide img
+  {
+      display: block;
+  }
+  .slick-slide.slick-loading img
+  {
+      display: none;
+  }
+  .slick-slide.dragging img
+  {
+      pointer-events: none;
+  }
+  .slick-initialized .slick-slide
+  {
+      display: block;
+  }
+  .slick-loading .slick-slide
+  {
+      visibility: hidden;
+  }
+  .slick-vertical .slick-slide
+  {
+      display: block;
+  
+      height: auto;
+  
+      border: 1px solid transparent;
+  }
+  .slick-arrow.slick-hidden {
+      display: none;
+  }
+  @charset 'UTF-8';
+  /* Slider */
+  .slick-loading .slick-list
+  {
+      background: #fff url('http://maggiesadler.com/wp-content/uploads/2015/10/ajax-loader.gif') center center no-repeat;
+  }
+  
+  /* Icons */
+  @font-face
+  {
+      font-family: 'slick';
+      font-weight: normal;
+      font-style: normal;
+  
+      src: url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot');
+      src: url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot?#iefix') format('embedded-opentype'), url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.woff') format('woff'), url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.ttf') format('truetype'), url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.svg#slick') format('svg');
+  }
+  /* Arrows */
+  .slick-prev,
+  .slick-next
+  {
+      font-size: 0;
+      line-height: 0;
+  
+      position: absolute;
+      top: 50%;
+  
+      display: block;
+  
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      padding: 0;
+  
+      cursor: pointer;
+  
+      color: transparent;
+      border: none;
+      outline: none;
+      background: transparent;
+  }
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus
+  {
+      color: transparent;
+      outline: none;
+      background: transparent;
+  }
+  .slick-prev:hover:before,
+  .slick-prev:focus:before,
+  .slick-next:hover:before,
+  .slick-next:focus:before
+  {
+      opacity: 1;
+  }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before
+  {
+      opacity: .25;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before
+  {
+      font-family: 'slick';
+      font-size: 20px;
+      line-height: 1;
+  
+      opacity: .75;
+      color: white;
+  
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .slick-prev
+  {
+      left: 50px;
+      z-index: 1;
+  }
+  [dir='rtl'] .slick-prev
+  {
+      right: -25px;
+      left: auto;
+  }
+  .slick-prev:before
+  {
+      content: '';
+  }
+  [dir='rtl'] .slick-prev:before
+  {
+      content: '';
+      font-weight: bold;
+      font-size: 20px;
+  }
+  
+  .slick-next
+  {
+      right: 65px;
+  }
+  [dir='rtl'] .slick-next
+  {
+      right: auto;
+      left: -25px;
+  }
+  .slick-next:before
+  {
+      content: '';
+  }
+  [dir='rtl'] .slick-next:before
+  {
+      content: '';
+  }
+  
+  /* Dots */
+  .slick-slider
+  {
+      margin-bottom: 30px;
+  }
+  
+  .slick-dots
+  {
+      position: absolute;
+      bottom: -45px;
+  
+      display: block;
+  
+      width: 100%;
+      padding: 0;
+  
+      list-style: none;
+  
+      text-align: center;
+  }
+  .slick-dots li
+  {
+      position: relative;
+  
+      display: inline-block;
+  
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+      padding: 0;
+  
+      cursor: pointer;
+  }
+  .slick-dots li button
+  {
+      font-size: 0;
+      line-height: 0;
+  
+      display: block;
+  
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+  
+      cursor: pointer;
+  
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: transparent;
+  }
+  .slick-dots li button:hover,
+  .slick-dots li button:focus
+  {
+      outline: none;
+  }
+  .slick-dots li button:hover:before,
+  .slick-dots li button:focus:before
+  {
+      opacity: 1;
+  }
+  .slick-dots li button:before
+  {
+      font-family: 'slick';
+      font-size: 6px;
+      line-height: 20px;
+  
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      width: 20px;
+      height: 20px;
+  
+      content: '•';
+      text-align: center;
+  
+      opacity: .25;
+      color: black;
+  
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-dots li.slick-active button:before
+  {
+      opacity: .75;
+      color: black;
+  }
+
+  .slick-list.draggable > div{
+    width: auto;
+  }
