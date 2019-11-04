@@ -1,3 +1,31 @@
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 300;
+	src:url('../fonts/Ubuntu-Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight:400;
+	src:url('../fonts/Ubuntu-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight:500;
+	src:url('../fonts/Ubuntu-Regular.woff') format('woff');
+}
+
+/* @font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight:700;
+	src:url('../fonts/HindVadodara-Regular.woff') format('woff');
+} */
+
+
+
 .wholebody{
     margin: 0;
     padding: 0;
@@ -143,8 +171,21 @@
     padding: 15px 20px;
     text-decoration: none;
     margin-left: -3px;
+    position: relative;
+    transition: all 1s ease-out;
+    z-index: 9;
+    font-size: 16px;
+}
+.get_app_now_search form a:hover{
+    border: 1px solid #50cdc5;
+    background-color: transparent;
 }
 
+.get_app_now_search form a:hover::before,.get_app_now_search form a:hover::after{
+    width: 50%;
+    background-color: #50cdc5;
+    z-index: -1;
+}
 .get_app_now_search form {
     padding: 100px 0;
 }
@@ -333,6 +374,9 @@
     position: relative;
 }
 
+.pricing_plans_column{
+    max-width: 400px;
+}
 
 .pricing_plans_wrapper div:nth-child(odd) .basic{
     border-top: 3px solid #ff6b6b;
@@ -388,7 +432,8 @@
     left: 0;
     transform: translate(-100%, 0);
     height: 1px;
-    width: 68.5%;
+    /* width: 68.5%; */
+    width: 107px;
     background: #e8e8e8;
     z-index: -1;
 }
@@ -407,7 +452,8 @@
     left: 0;
     transform: translate(-100%, 0);
     height: 1px;
-    width: 68.5%;
+    /* width: 68.5%; */
+    width: 107px;
     background: #c54747;
     z-index: -1;
 }
@@ -431,20 +477,24 @@
 .basic h3{
     font-size: 48px;
     font-weight: 400;
-    position: relative;
     margin-bottom: 0;
 }
 
 .basic h3 span{
     font-size: 30px;
     font-weight: 600;
+    position: relative;
+}
+
+.basic h3 span sup{
     position: absolute;
-    top: 9px;
-    left: 100px;
+    top: 0;
+    left: -11px;
 }
-.basic h3.middle_sup span{
+
+/* .basic h3.middle_sup span{
     left: 125px;
-}
+} */
 .basic small{
     font-size: 15px;
     font-weight: 500;
@@ -497,6 +547,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0 -10px;
     margin-top: 40px;
 
@@ -630,6 +681,8 @@ h6.top_paragraph{
     margin-top: 50px;
     overflow-x: visible;
     transition: .33s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sub_software_services h4{
@@ -754,15 +807,28 @@ h6.top_paragraph{
     font-size: 14px;
     color: #9b9b9b;
     font-weight: 400;
-    padding: 15px 58px 40px 128px;
+    padding: 15px 58px 40px 28px;
     text-align: justify;
     line-height: 1.5;
 }
+.company_details i{
+    color: #ff6b6b;
+    transform: rotate(180deg) scaleX(-1);
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
 
+.company_details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
 .our_clients_column{
     flex: 0 0 45%;
     max-width: 100%;
     padding: 0 30px;
+    /* padding-left: 30px;
+    padding-right: 0; */
 }
 
 .our_clients_row{
@@ -811,11 +877,10 @@ h6.top_paragraph{
 .image_section_wrapper{
     position: relative;
 }
-/* .image_part{
-    max-width: 444px;
-    max-height: 328px;
-    overflow: hidden;
-} */
+.image_section_wrapper .image_part{
+    max-width: 530px;
+    margin: 0 auto;
+}
 
 .image_part figure img{
     width: 100%;
@@ -851,8 +916,7 @@ h6.top_paragraph{
 .image_section_wrapper .overlay{
     position: absolute; /* Sit on top of the page content */
     visibility: hidden; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+    max-width: 530px;
     top: 0;
     left: 0;
     right: 0;
@@ -860,7 +924,7 @@ h6.top_paragraph{
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
-    /* transition: all 0.3s ease-in-out; */
+    margin: 0 auto;
 }
 
 .image_section_wrapper:hover .image_hover_part .hover_overlay,.image_section_wrapper:hover .overlay{
@@ -1238,7 +1302,7 @@ h6.top_paragraph{
   
   .slick-prev
   {
-      left: 50px;
+      left: -20px;
       z-index: 1;
   }
   [dir='rtl'] .slick-prev
@@ -1259,7 +1323,7 @@ h6.top_paragraph{
   
   .slick-next
   {
-      right: 65px;
+      right: -10px;
   }
   [dir='rtl'] .slick-next
   {
@@ -1366,4 +1430,247 @@ h6.top_paragraph{
 
   .slick-list.draggable > div{
     width: auto;
+  }
+ 
+
+  @media(max-width: 768px){
+    .about_us_image_part,.advantages {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .sub_advantages a {
+        justify-content: center;
+    }
+
+    .pricing_plans_wrapper > div:nth-child(2) {
+       margin: 40px 0 0;
+    }
+
+    .result_driven_content a{
+        margin: 0 auto;
+    }
+
+    .result_driven_content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right_border{
+        border-right: none;
+        padding-top: 10px;
+    }
+
+    .company_details h6{
+        padding: 0 15px;
+    }
+
+    .image_part figure,.portfolio_links a,.image_section_wrapper .overlay{
+        margin: 0 0 15px;
+    }
+    .portfolio_links a{
+        margin: 0 10px 15px;
+    }
+    .image_section_wrapper .overlay{
+        /* padding: 0 10px; */
+        margin: 0 auto;
+    }
+
+    .image_section_wrapper{
+        margin: 0 10px;
+    }
+    .nav-spacing,.footer_element{
+        text-align: center;
+    }
+
+    .client_details{
+        padding-left: 20px;
+    }
+
+    .client_review{
+        padding: 10px 0;
+        margin-top: 0;
+    }
+
+    .support{
+        justify-content: center;
+        text-align: left;
+    }
+
+    .some_facts_heading h6,.mobile_sms_content{
+        padding: 0;
+    }
+
+    .slick-slider,.result_driven_content h6 {
+        margin-bottom: 10px;
+    }
+
+    .our_clients,.portfolio_wrapper,.some_facts,.software_services,.result_driven_content,.pricing_plans,.get_app_now_search form,.about_us{
+        padding: 20px 0 30px;
+    }
+
+    .mobile_sms_image{
+        margin: 20px 0 -16px;
+    }
+
+    .mobile_sms_button,.about_us_wrapper figure {
+        justify-content: center;
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .pricing_plans > .container >h2,.our_clients h2{
+        margin-bottom: 20px;
+        font-size: 45px;
+    }
+
+    .about_us_wrapper{
+        margin: 0 auto;
+    }
+
+    .navbar_top_spacing{
+        padding-top: 0;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .content_wrapper > .banner_content h1{
+        font-size: 55px;
+    }
+
+    .content_wrapper > .banner_content h3,.mobile_sms_content h2,.result_driven_content h3,.software_services div h2,.some_facts_heading h2,.footer_element h3{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .get_app_now_content h2,.advantages h2,.portfolio_wrapper h2 {
+        font-size: 45px;
+        padding-top: 20px;
+    }
+
+    .banner_button a{
+        font-size: 14px;
+    }
+    .contact_details a {
+        font-size: 24px;
+    }
+    .mobile_sms_content h6,.result_driven_content h6,.sub_software_services h4,.footer_links a,.copyright_content{
+        font-size: 15px;
+    }
+
+    .sub_software_services h4,.some_facts_heading h6{
+        font-size: 16px;
+    }
+
+    .slick-next.slick-arrow,.slick-prev.slick-arrow{
+        display: none !important;
+    }
+
+    .mobile_sms_content h2{
+        padding-top: 30px;
+    }
+
+    .company_details i{
+        padding-left: 10px;
+        padding-bottom: 0;
+    }
+
+    .our_clients_column {
+        padding-left: 30px;
+        padding-right: 0;
+    }
+  }
+
+  @media (max-width: 425px){
+    .company_details h6{
+        text-align: left;
+    }
+    .sub_software_services{
+        margin-top: 30px;
+    }
+    .copyright{
+        justify-content: center;
+    }
+    .mobile_sms_image{
+        margin: 20px 0 -16px;
+    }
+
+    .content_wrapper > .banner_content h1 {
+        font-size: 40px;
+    }
+
+    .content_wrapper > .banner_content h3, .mobile_sms_content h2, .result_driven_content h3, .software_services div h2, .some_facts_heading h2, .footer_element h3, .get_app_now_content h2, .advantages h2, .portfolio_wrapper h2 {
+        font-size: 30px;
+    }
+
+    .app_collection a,.counter h6 {
+        font-size: 16px;
+    }  
+
+    .get_app_now_search form a{
+        padding: 17px 10px;
+        font-size: 14px;
+    }
+
+    .video_player_wrapper{
+        font-size: 11px;
+    }
+
+    .video_player_wrapper h3 {
+        font-size: 28px;
+    }
+
+    .fa_icon_text h3{
+        font-size: 19px;
+    }
+
+    .fa_icon_text h6 {
+        font-size: 13px;
+    }
+
+    .sub_advantages {
+        padding: 0;
+        width: 95%;
+    }
+
+    .pricing_plans > .container >h2, .our_clients h2,.basic h3 {
+        font-size: 35px;
+    }
+
+    .basic h5 {
+        font-size: 20px;
+    }
+
+    .basic small,.footer_links a,.advantages > a.about_us_button {
+        font-size: 13px;
+    }
+
+    .basic a,.portfolio_links a {
+        font-size: 12px;
+    }
+
+    .counter_element h3 {
+        font-size: 50px;
+    }
+
+    .contact_details a {
+        font-size: 21px;
+    }
+
+    .banner_button > div{
+        padding: 10px 13px;
+    }
+
+    .banner_button a {
+        font-size: 13px;
+    }
+
+    .basic h3 span sup {
+        top: 6px;
+    }
+  }
+
+  @media(max-width: 385px){
+    .mobile_sms_image{
+        margin: 20px 0 -16px;
+    }
   }
